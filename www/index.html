@@ -23,17 +23,106 @@
         <meta name="format-detection" content="telephone=no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sweet-alert.css">
+    
+        <title>PushNews</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Hello World</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+       <main id="cd-main-content">
+    <section id="cd-intro">
+        
+        
+        <center>
+        <h1>
+        <div class="wow pulse" data-wow-iteration="infinite" data-wow-duration="1500ms">  PushNews </div >
+            <h1>
+           </br></br></br></br></br></br></br></br></br></br></br>
+           <div class="showcase sweet">
+    
+    <button>Show error message</button>
+
+</div>
+
+
+<div class="showcase sweet1">
+    
+    <button>Show error message</button>
+    
+</div>
+
+<div class="showcase sweet2">
+    
+    <button>Show error message</button>
+    
+</div>
+
+
+
+    
+            </center>
+        
+        
+
+        <header class="cd-header">
+            <div id="cd-logo"><a href="#0"><img src="img/cd-logo.svg" alt="Logo"></a></div>
+            <a class="cd-menu-trigger" href="#main-nav">Menu<span></span></a>
+        </header>
+        <div class="cd-blurred-bg"></div>
+    </section> <!-- cd-intro -->
+</main>
+
+  
+<div class="cd-shadow-layer"></div>
+
+<nav id="main-nav">
+    <ul>
+        <li><a href="#0"><span>Tour</span></a></li>
+        <li><a href="#0"><span>Pricing</span></a></li>
+        <li><a href="#0"><span>Labs</span></a></li>
+        <li><a href="#0"><span>About</span></a></li>
+        <li><a href="#0"><span>Contact us</span></a></li>
+    </ul>
+    <a href="#0" class="cd-close-menu">Close<span></span></a>
+</nav>
+<script>
+document.querySelector('#cd-intro .showcase.sweet button').onclick = function(){
+    swal("Oops...", "Something went wrong!", "error");
+};
+document.querySelector('#cd-intro .showcase.sweet1 button').onclick = function(){
+    swal("Oops...", "Something went wrong!", "error");
+};
+document.querySelector('#cd-intro .showcase.sweet2 button').onclick = function(){
+    swal("Oops...", "Something went wrong!", "error");
+};
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+<script src="js/wow.js"></script>
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
