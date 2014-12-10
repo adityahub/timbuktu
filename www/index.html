@@ -36,6 +36,9 @@
         <title>PushNews</title>
     </head>
     <body>
+        <div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
        <main id="cd-main-content">
     <section id="cd-intro">
         
@@ -132,5 +135,14 @@ document.querySelector('#cd-intro .showcase.sweet2 button').onclick = function()
         <script type="text/javascript">
             app.initialize();
         </script>
+        <script type="text/javascript">
+    //<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+            $('#status').fadeOut(); // will first fade out the loading animation
+            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+            $('body').delay(350).css({'overflow':'visible'});
+        })
+    //]]>
+</script>
     </body>
 </html>
